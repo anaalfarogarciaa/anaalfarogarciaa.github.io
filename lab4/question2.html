@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>How To Jump Start A Car</title>
+	<link href="css/koala.css" rel="stylesheet" type="text/css">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+	
+	<h1>How To Jump Start A Car</h1>
+	<a href="home.html">  Home </a>
+	<a href="question1.html"> Question 1 </a>
+	<a href="question2.html"> Question 2 </a>
+	
+    <div id="wrapper">
+	<h2>What should you connect the black (negative) jumper cable to on the car with the dead battery?</h2>
+	<h3>Click on one of the following choices</h3>
+
+	<h2 onclick="wrongAnswer1()" class="choices"> Battery </h2>
+	<h2 onclick="wrongAnswer2()" class="choices"> Hood </h2>
+	<h2 onclick="rightAnswer()" class="choices"> Engine </h2>
+	<h2 onclick="wrongAnswer3()" class="choices"> Positive </h2>
+
+<div id="feedback"></div>
+<img id="black_cable" src="img/black_cable.jpg" />
+</div>
+ 
+	<script>
+ 	   function rightAnswer(){
+         $("#feedback").html("<h2 style='color:green'> Correct! Connecting the black (negative) jumper cable to an unpainted metal part of the engine block provides a safe and effective ground. leaves.</h2>");
+         $("#black_cable").show();
+        }
+        function wrongAnswer1(){
+          $("#feedback").html("<h2 style='color:red'> Incorrect! Avoid the battery terminal to prevent sparking and potential explosion from hydrogen gas. </h2>");
+          $("#black_cable").hide();
+        }
+       function wrongAnswer2(){
+         $("#feedback").html("<h2 style='color:red'>Incorrect! The hood is painted and doesn’t provide a good electrical connection. </h2>");
+         $("#black_cable").hide();
+      }
+		function wrongAnswer3(){
+         $("#feedback").html("<h2 style='color:red'> Incorrect! Connecting to the positive terminal can cause a short circuit and damage the car’s electrical system. </h2>");
+         $("#black_cable").hide();
+      }
+    </script>
+
+
+</body>
+</html>
