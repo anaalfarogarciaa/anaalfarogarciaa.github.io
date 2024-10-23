@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jumpstart</title>
+<link href="css/final.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<header>
+		<h1> How To Jump-Start A Car </h1>
+	</header>
+    <nav>
+        <a href="home.html">Why?</a>
+        <a href="oil_check.html">Oil Check and Change</a>
+		<a href="tire.html">Tire Change</a>
+		<a href="wiper.html">Replace Wipers</a>
+		<a href="wiper_check.html">Wipers Check and Refill</a>
+		<a href="jumpstart.html">Jump-Start</a>
+    </nav>
+	<div id="instructions">
+        <h2>Instructions</h2>
+        <img id="carImage" src="img/car.jpg" alt="Car Image">
+        <p id="step1">Step 1: Park the car with the good battery close to the car with the dead battery without touching. Turn off both cars and open their hoods.</p>
+    </div>
+    
+    <button id="nextStep">Press To View All Steps</button>
+    <button id="hideSteps" style="display: none;">Hide Steps</button>
+    <div id="additionalContent"></div>
+
+    <script>
+        $(document).ready(function() {
+            // Change content when hovering over an image
+            $("#carImage").hover(
+                function() {
+                    $(this).addClass("hovered");
+                }, function() {
+                    $(this).removeClass("hovered");
+                }
+            );
+
+            // Add content when clicking on text
+            $("#step1").click(function() {
+                $("#additionalContent").addClass("visible").html("<p>Make sure the cars are in park or neutral and both engines are turned off.</p>").show();
+            });
+
+            // Change content when clicking a button
+            $("#nextStep").one("click", function() {
+                $("#instructions").append(`
+                    <p id='step2'>Step 2: Attach one end of the red (positive) jumper cable to the positive terminal of the dead battery and the other end to the positive terminal of the good battery.</p>
+                    <p id='step3'>Step 3: Attach one end of the black (negative) jumper cable to the negative terminal of the good battery. Attach the other end to an unpainted metal surface on the engine block or chassis of the dead battery car.</p>
+                    <p id='step4'>Step 4: Start the engine of the car with the good battery and let it run for a few minutes.</p>
+                    <p id='step5'>Step 5: Try to start the car with the dead battery. If it doesn’t start, wait a few more minutes and try again.</p>
+                    <p id='step6'>Step 6: Remove the black clamp from the unpainted metal surface, then the black clamp from the good battery, followed by the red clamp from the good battery, and finally the red clamp from the dead battery. Let the jump-started car run for at least 15-20 minutes.</p>
+                `);
+                $("#hideSteps").show();
+                $("#nextStep").hide();
+            });
+
+            $("#hideSteps").click(function() {
+                $("#instructions").find("p[id^='step']").remove();
+                $("#hideSteps").hide();
+                $("#nextStep").show();
+            });
+        });
+    </script>
+</body>
+</html>

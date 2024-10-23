@@ -1,0 +1,157 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+    background-image: url("../img/background.gif"); /* background image */
+    color: #444; /* text color for the entire document */
+    font-size: 12px;
+    font-family: Cambria, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0; 
+    margin: 0; /* Removes default margin for body */
+    padding: 0; /* Removes default padding for body */
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h1, h2 { 
+    text-align: center; /* centers h1 and h2 content */
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: #333333;
+}
+
+h2 {
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+}
+
+a {
+    padding: 10px 20px; /* Adds padding to links */
+    margin: 5px; /* Adds margin between links */
+    font-size: 125%;
+    background-color: #ff6600; 
+    color: #0099cc; 
+    text-decoration: none; /* Removes underline from links */
+    display: inline-block; /* Ensures links are displayed as blocks */
+}
+
+a:hover {
+    font-size: 150%;
+    background-color: #FFF300; 
+    color: #0077aa; 
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+	margin: 0;
+}
+
+ul li{
+	margin: 0;
+	padding: 0;
+}
+
+.stepContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.stepDescription, .stepImage {
+    margin-bottom: 10px;
+}
+
+.stepImage img {
+    max-width: 100%;
+    height: auto;
+}
+
+.stepImage figcaption {
+    font-size: 0.8em;
+    color: #555;
+    text-align: center;
+}
+
+.stepTitle{
+	padding:10px;
+	text-align:left;
+	background-color:#ff6600;
+	font-weight: bold;
+	font-size: 150%;
+ }
+
+table{
+	width: 100%;
+	border-spacing: 20px;
+}
+
+td{
+	border: 1px solid #ddd;
+	text-align: center;
+    padding: 10px;
+    background-color: white; 
+}
+
+iframe{
+	width: 100%;
+	height: 100%;
+}
+
+ #image-container {
+            position: relative;
+            display: inline-block;
+}
+
+#wiper-image {
+            width: 600px; /* Adjust as necessary */
+}
+        
+#description-box {
+            margin-top: 10px;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            display: none; /* Hidden by default */
+}
+        
+#detail-image {
+            margin-top: 10px;
+            width: 300px; /* Adjust size for the detail image */
+}
+
+.centered {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.centered img {
+    max-width: 100%; 
+    height: auto;
+    width: 50%;      
+}
+
+img{
+    max-width: 100%; /* Ensures images do not exceed the container width */
+    height: auto;    /* Maintains aspect ratio */
+    width: 80%;      /* Adjust width percentage as needed */
+}
